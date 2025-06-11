@@ -30,5 +30,5 @@ public class TableEntity {
     private Restaurant restaurant;
 
     @Column(name = "restaurant_name", nullable = false)
-    private String restaurantName; // 🔥 Ahora se almacena en la BD
+    private String restaurantName; 
 }

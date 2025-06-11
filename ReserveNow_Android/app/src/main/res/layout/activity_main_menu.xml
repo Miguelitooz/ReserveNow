@@ -4,25 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Barra superior con logo -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:orientation="horizontal"
         android:background="#F5F1E9"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:padding="5dp"
         android:elevation="4dp">
 
+        <!-- Botón de reseñas al lado izquierdo -->
+        <ImageButton
+            android:id="@+id/btnReviews"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_review"
+            android:contentDescription="Reseñas"
+            android:padding="8dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Logo centrado -->
         <ImageView
             android:id="@+id/logoImageView"
-            android:layout_width="105dp"
+            android:layout_marginHorizontal="80dp"
+            android:layout_width="100dp"
             android:layout_height="60dp"
             android:adjustViewBounds="true"
             android:contentDescription="Logo"
             android:scaleType="fitCenter"
             android:src="@drawable/logo" />
-
     </LinearLayout>
+
 
     <!-- Fragmento principal -->
     <FrameLayout

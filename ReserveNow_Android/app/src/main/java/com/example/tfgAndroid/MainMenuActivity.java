@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.example.tfgAndroid.Fragments.CreateReservationFragment;
 import com.example.tfgAndroid.Fragments.ProfileFragment;
 import com.example.tfgAndroid.Fragments.RestaurantsFragment;
+import com.example.tfgAndroid.Fragments.ReviewsFragment;
 import com.example.tfgAndroid.Fragments.SettingsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -29,6 +31,9 @@ public class MainMenuActivity extends AppCompatActivity {
 
     // Índice para saber qué fragment está activo
     private int currentFragmentIndex = 0;
+
+    // Botón de reseñas
+    private ImageButton btnReviews;
 
     private BroadcastReceiver logoutReceiver = new BroadcastReceiver() {
         @Override
@@ -47,15 +52,26 @@ public class MainMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+        // Inicializa fragments
         profileFragment = new ProfileFragment();
         createReservationFragment = new CreateReservationFragment();
         restaurantsFragment = new RestaurantsFragment();
         settingsFragment = new SettingsFragment();
 
+        // Inicializa y maneja click del botón de reseñas
+        btnReviews = findViewById(R.id.btnReviews);
+        btnReviews.setOnClickListener(v -> {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new ReviewsFragment())
+                    .addToBackStack(null)
+                    .commit();
+        });
+
+        // Carga el primer fragment (Perfil)
         setCurrentFragment(profileFragment, 0);
 
+        // Configura la navegación inferior
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -78,13 +94,12 @@ public class MainMenuActivity extends AppCompatActivity {
                 } else if (id == R.id.nav_settings) {
                     setCurrentFragment(settingsFragment, 3);
                     return true;
-                } else {
-                    return false;
                 }
+                return false;
             }
         });
 
-        // Registrar el receiver correctamente
+        // Registrar el receiver para logout
         ContextCompat.registerReceiver(
                 this,
                 logoutReceiver,
@@ -96,7 +111,6 @@ public class MainMenuActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        // Desregistrar receiver para evitar leaks
         unregisterReceiver(logoutReceiver);
     }
 
@@ -107,16 +121,16 @@ public class MainMenuActivity extends AppCompatActivity {
         if (isGoingRight) {
             getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(
-                            R.anim.slide_in_right,  // nuevo fragment entra desde derecha
-                            R.anim.slide_out_left   // fragment actual sale hacia izquierda
+                            R.anim.slide_in_right,
+                            R.anim.slide_out_left
                     )
                     .replace(R.id.fragment_container, fragment)
                     .commit();
         } else {
             getSupportFragmentManager().beginTransaction()
                     .setCustomAnimations(
-                            R.anim.slide_in_left,   // nuevo fragment entra desde izquierda
-                            R.anim.slide_out_right  // fragment actual sale hacia derecha
+                            R.anim.slide_in_left,
+                            R.anim.slide_out_right
                     )
                     .replace(R.id.fragment_container, fragment)
                     .commit();

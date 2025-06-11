@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0C8B0"
+    android:padding="16dp">
+
+    <!-- Contenedor principal con fondo redondeado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/container_background"
+        android:padding="24dp"
+        android:elevation="6dp">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/txtReviewsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reseñas"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:fontFamily="serif"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Separador -->
+        <View
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="#8B6D5C"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Spinner para elegir restaurante -->
+        <Spinner
+            android:id="@+id/spinnerRestaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#8B6D5C"
+            android:fontFamily="serif"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Campo de texto para la nueva reseña -->
+        <EditText
+            android:id="@+id/etReviewText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe tu reseña..."
+            android:fontFamily="serif"
+            android:textColor="#444444"
+            android:textSize="16sp"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Botón de envío -->
+        <Button
+            android:id="@+id/btnSubmitReview"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Enviar reseña"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#8B6D5C"
+            android:layout_marginBottom="24dp"/>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="3dp"
+            android:background="#8B6D5C"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Lista de reseñas -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReviews"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"/>
+    </LinearLayout>
+</LinearLayout>
