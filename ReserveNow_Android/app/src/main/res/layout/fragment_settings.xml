@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settingsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="top|center_horizontal"
+    android:background="#D0C8B0"> <!-- Fondo beige suave -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        android:padding="24dp"
+        android:elevation="4dp"
+        android:layout_margin="12dp"
+        android:layout_gravity="center_horizontal">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario:"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:textColor="#333333"
+                android:layout_marginBottom="8dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"/>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal">
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textSize="24sp"
+                android:fontFamily="serif"
+                android:textColor="#333333"
+                android:layout_marginBottom="20dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"/>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:text="Cerrar Sesion"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:fontFamily="serif"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#8B6D5C"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnDeleteProfile"
+                android:text="Darse de baja"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FF0000"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

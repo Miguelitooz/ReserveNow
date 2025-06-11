@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D0C8B0"
+    android:padding="16dp">
+
+
+    <!-- Contenedor blanco -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        android:padding="24dp"
+        android:elevation="4dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Reserva"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="#333333"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Línea decorativa -->
+        <View
+            android:layout_width="120dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:background="#8B6D5C"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Scroll solo para los campos -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Restaurante -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona restaurante"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="4dp" />
+                <Spinner
+                    android:id="@+id/spinnerRestaurant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#8B6D5C" />
+
+                <!-- Fecha -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona fecha"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textColor="#333333"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="4dp" />
+                <TextView
+                    android:id="@+id/tvSelectedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pulsa para seleccionar"
+                    android:background="#E0D6C3"
+                    android:padding="10dp"
+                    android:fontFamily="serif"
+                    android:textColor="#333333" />
+
+                <!-- Hora -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona hora"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textColor="#333333"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="4dp" />
+                <Spinner
+                    android:id="@+id/spinnerTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#8B6D5C" />
+
+                <!-- Comensales -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Número de comensales"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textColor="#333333"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="4dp" />
+                <Spinner
+                    android:id="@+id/spinnerGuests"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#8B6D5C" />
+
+                <!-- Alergias -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selecciona alergias alimentarias"
+                    android:textSize="18sp"
+                    android:fontFamily="serif"
+                    android:textColor="#333333"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="4dp" />
+                <TextView
+                    android:id="@+id/tvSelectedAllergies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pulsa para seleccionar"
+                    android:background="#E0D6C3"
+                    android:padding="10dp"
+                    android:fontFamily="serif"
+                    android:textColor="#333333" />
+
+                <!-- Botón crear -->
+                <Button
+                    android:id="@+id/btnCreateReservation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Crear Reserva"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#8B6D5C"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

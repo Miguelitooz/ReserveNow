@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#D0C8B0"
+    android:gravity="top|center_horizontal">
+
+    <!-- Contenedor con fondo redondeado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        android:padding="24dp"
+        android:elevation="6dp"
+        android:layout_margin="12dp">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tu reserva"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:fontFamily="serif"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Separador -->
+        <View
+            android:layout_width="80dp"
+            android:layout_height="3dp"
+            android:background="#8B6D5C"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Scroll para contenido -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Campo reutilizable -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:text="Restaurante:"
+                        android:textSize="18sp"
+                        android:textColor="#333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:layout_marginEnd="8dp" />
+                    <EditText
+                        android:id="@+id/txtRestaurant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:fontFamily="serif"
+                        android:background="@android:color/transparent"
+                        android:textSize="18sp"
+                        android:textColor="#333" />
+                </LinearLayout>
+                <!-- Usuario -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:text="Usuario:"
+                        android:textSize="18sp"
+                        android:textColor="#333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="serif" />
+                    <EditText
+                        android:id="@+id/txtUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="serif"
+                        android:textSize="18sp"
+                        android:textColor="#333" />
+                </LinearLayout>
+
+                <!-- Separador entre usuario y los demás campos -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#8B6D5C"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"/>
+
+
+                <!-- Fecha + Hora -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Fecha:"
+                            android:textSize="18sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:textColor="#333"
+                            android:fontFamily="serif" />
+
+                        <EditText
+                            android:id="@+id/txtDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="serif"
+                            android:textSize="18sp"
+                            android:textColor="#333"
+                            android:layout_marginEnd="8dp" />
+
+                        <Spinner
+                            android:id="@+id/spinnerHour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#8B6D5C" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+
+                <!-- Comensales -->
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Comensales:"
+                    android:textSize="18sp"
+                    android:textColor="#333"
+                    android:fontFamily="serif"
+                     />
+
+                <Spinner
+                    android:id="@+id/spinnerGuests"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#8B6D5C" />
+
+
+
+            </LinearLayout>
+
+                <!-- Alergias -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alergias:"
+                    android:textSize="18sp"
+                    android:textColor="#333"
+                    android:fontFamily="serif"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvSelectedAllergies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:background="#E7DDD0"
+                    android:fontFamily="serif"
+                    android:text="Pulsa para seleccionar"
+                    android:textColor="#333"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Botones -->
+                <LinearLayout
+                    android:id="@+id/editButtonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp">
+
+                    <Button
+                        android:id="@+id/btnEdit"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="48dp"
+                        android:text="Editar"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:textColor="#FFF"
+                        android:backgroundTint="#8B6D5C"
+                        android:layout_marginEnd="8dp" />
+
+                    <Button
+                        android:id="@+id/btnDelete"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="48dp"
+                        android:text="Eliminar"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:textColor="#FFF"
+                        android:backgroundTint="#8B6D5C" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

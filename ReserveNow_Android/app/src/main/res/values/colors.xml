@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+        <color name="text_color_normal">#333333</color>
+        <color name="text_color_edit">#6A1B9A</color>
+    <color name="gray_editable">#EEEEEE</color>
+
+    <color name="background_edittext">#FFFFFF</color>
+
+    <color name="editable_bg">#FFF3E0</color> <!-- Color suave para fondo editable -->
+    <color name="editable_text">#333333</color> <!-- Texto oscuro cuando se edita -->
+    <color name="non_editable_text">#000000</color> <!-- Texto estándar -->
+
+    <color name="marron_claro">#D2B48C</color>
+
+
+
+</resources>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#D0C8B0">  <!-- Fondo beige/marrón muy suave -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        android:padding="20dp"
+        android:elevation="4dp"
+        android:layout_margin="8dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:text="ReserveNow"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:fontFamily="serif"
+            android:textColor="#333333" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:background="#8B6D5C"
+            android:layout_marginBottom="24dp" />
+
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Usuario"
+            android:inputType="text"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:textColor="#333333"
+            android:background="@android:color/transparent"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:textColor="#333333"
+            android:background="@android:color/transparent"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            android:fontFamily="serif"
+            android:textColor="#333333"
+            android:background="@android:color/transparent"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Registrar"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#8B6D5C"
+            android:textColor="#FFFFFF"
+            android:fontFamily="serif"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Iniciar sesión"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="#8B6D5C"
+            android:textColor="#FFFFFF"
+            android:fontFamily="serif" />
+
+    </LinearLayout>
+
+</LinearLayout>

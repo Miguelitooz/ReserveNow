@@ -1,0 +1,259 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D0C8B0"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/restaurantsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        android:padding="24dp"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nuestros Restaurantes"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textColor="#333333"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:background="#8B6D5C"
+            android:layout_marginBottom="16dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/restaurant1Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="16dp"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/imgRestaurant1"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Imagen El Rincon Italiano"
+                            android:src="@drawable/rincon_italiano" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="El Rincón Italiano"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:fontFamily="serif"
+                                android:textColor="#2E2E2E" />
+
+                            <ImageButton
+                                android:id="@+id/gpsButton1"
+                                android:layout_width="48dp"
+                                android:scaleType="fitCenter"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_gps"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Abrir mapa para El Rincón Italiano" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cocina Italiana tradicional"
+                            android:textSize="14sp"
+                            android:fontFamily="serif"
+                            android:textColor="#757575"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingBottom="12dp" />
+
+                        <LinearLayout
+                            android:id="@+id/menuContainer1"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/restaurant2Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="16dp"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/imgRestaurant2"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Imagen La Parrilla"
+                            android:src="@drawable/la_parrilla" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="La Parrilla"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:fontFamily="serif"
+                                android:textColor="#2E2E2E" />
+
+                            <ImageButton
+                                android:id="@+id/gpsButton2"
+                                android:layout_width="48dp"
+                                android:scaleType="fitCenter"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_gps"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Abrir mapa para La Parrilla" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Especialidades a la parrilla"
+                            android:textSize="14sp"
+                            android:fontFamily="serif"
+                            android:textColor="#757575"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingBottom="12dp" />
+
+                        <LinearLayout
+                            android:id="@+id/menuContainer2"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/restaurant3Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF">
+
+                        <ImageView
+                            android:id="@+id/imgRestaurant3"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Imagen El Asador"
+                            android:src="@drawable/el_asador" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="El Asador"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:fontFamily="serif"
+                                android:textColor="#2E2E2E" />
+
+                            <ImageButton
+                                android:id="@+id/gpsButton3"
+                                android:layout_width="48dp"
+                                android:scaleType="fitCenter"
+                                android:layout_height="48dp"
+                                android:src="@drawable/ic_gps"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="Abrir mapa para El Asador" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sabores auténticos a la parrilla"
+                            android:textSize="14sp"
+                            android:fontFamily="serif"
+                            android:textColor="#757575"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:paddingBottom="12dp" />
+
+                        <LinearLayout
+                            android:id="@+id/menuContainer3"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="#D0C8B0">
+
+    <!-- RecyclerView para mostrar reservas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerReservations"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Layout para mensaje + imagen cuando no hay reservas -->
+    <LinearLayout
+        android:id="@+id/layoutNoReservations"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="16dp">
+
+        <!-- Cuadro con fondo redondeado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_background"
+            android:padding="20dp"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/txtNoReservations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No tienes reservas"
+                android:fontFamily="serif"
+                android:textSize="32sp"
+                android:textColor="#333"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="20dp" />
+
+            <ImageView
+                android:id="@+id/imgNoReservations"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_no_reservations"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <!-- Botón para redirigir a otro Activity -->
+        <Button
+            android:id="@+id/btnGoToAnotherActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hacer Reserva"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#8B6D5C"
+            android:layout_marginTop="20dp"
+            android:padding="12dp" />
+    </LinearLayout>
+</LinearLayout>
